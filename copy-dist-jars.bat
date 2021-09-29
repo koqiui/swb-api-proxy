@@ -1,1 +1,0 @@
-@python ./copy-dist-jars.py
