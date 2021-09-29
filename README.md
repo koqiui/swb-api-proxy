@@ -1,4 +1,4 @@
-# swb-api-proxy
+# 商维宝-api-代理
 客户内网部署，用以代理到商维宝开放平台（open.shangwb.com/open.sweib.com）的api调用
 
 > 本应用 为独立运行的web应用（发布目录为 dist）
