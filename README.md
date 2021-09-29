@@ -55,3 +55,5 @@
 - 开放平台的 api文档 和 管理控制台 请打开 开放平台基础url，自行查看 和 管理
 - 针对某个api的具体url我们只会在最初几次给，以后客户需要自行到api文档查找记录/收藏
 - 使用api-proxy时，就可以用自行部署的api-proxy的基础Url 替换 开放平台基础url了
+- 自行对接开发可参考开放平台api文档中 **基本使用说明** 的 **快速接入参考代码**
+<img width="600" height="480" alt="image" src="https://user-images.githubusercontent.com/6115009/135312886-bc170be5-12b3-4c99-b596-4b5e0929a14e.png">
