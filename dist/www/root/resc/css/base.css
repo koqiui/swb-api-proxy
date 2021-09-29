@@ -1,0 +1,839 @@
+/* @update: 2017-3-9 17:26*/
+
+@charset "UTF-8";
+
+/* 基本字体、box样式    */
+
+*,
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+
+html {
+    color: #1b1b1b;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html,
+body,
+p,
+div,
+span,
+a,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+label,
+input,
+select,
+option,
+optgroup,
+button,
+textarea,
+blockquote,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td,
+header,
+footer,
+nav,
+section,
+article,
+aside,
+details,
+figcaption,
+figure,
+colgroup,
+main,
+summary {
+    margin: 0;
+    padding: 0;
+}
+
+button,
+dd,
+div,
+dl,
+dt,
+form,
+img,
+input,
+li,
+ol,
+p,
+td,
+th,
+ul {
+    border: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font: 12px/1.5 "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, "\5B8B\4F53";
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+em,
+del,
+i {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    -webkit-text-size-adjust: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+}
+
+.outline[type=text]:focus,
+.outline[type=submit]:focus,
+.outline[type=radio]:focus,
+.outline[type=checkbox]:focus,
+.outline[type=password]:focus {
+    outline: none;
+}
+
+input[type=text]:focus,
+input[type=submit]:focus,
+input[type=radio]:focus,
+input[type=checkbox]:focus,
+input[type=password]:focus {
+    outline: none;
+}
+
+button:focus,
+input:focus,
+input {
+    outline: none;
+}
+
+a {
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #e7e7e7;
+    margin: 1em 0;
+    padding: 0;
+}
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    font-size: 100%;
+    vertical-align: middle;
+}
+
+button,
+input {
+    *overflow: visible;
+    line-height: normal;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+input[type="search"] {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+fieldset {
+    border: 1px solid #AAAAAA;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+legend {
+    height: 20px;
+    line-height: 20px;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: -4px;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+html,
+body {
+    color: #1b1b1b;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/*div {*/
+/*-moz-user-select: none; !*火狐*!*/
+/*-webkit-user-select: none; !*webkit浏览器*!*/
+/*-ms-user-select: none; !*IE10*!*/
+/*-khtml-user-select: none; !*早期浏览器*!*/
+/*user-select: none;*/
+/*}*/
+
+/* === 浮动 === */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix {
+    display: block;
+    zoom: 1
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden
+}
+
+/* === 块、行内块 === */
+
+.display-block {
+    display: block !important;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+/* === 居中 === */
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+/* === 加粗 === */
+.font-bold {
+    font-weight: 700;
+}
+
+.font-normal {
+    font-weight: normal;
+}
+
+/* === 内外边距 === */
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px !important;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.mb10 {
+    margin-bottom: 10px !important;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.mb20 {
+    margin-bottom: 20px !important;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.ml5 {
+    margin-left: 5px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.ml15 {
+    margin-left: 15px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.ml30 {
+    margin-left: 30px;
+}
+
+.mr5 {
+    margin-right: 5px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mr15 {
+    margin-right: 15px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.mr30 {
+    margin-right: 30px;
+}
+
+.pt5 {
+    padding-top: 5px;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+
+.pt15 {
+    padding-top: 15px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.pt30 {
+    padding-top: 30px;
+}
+
+.pt45 {
+    padding-top: 45px;
+}
+
+.pb5 {
+    padding-bottom: 5px;
+}
+
+.pb10 {
+    padding-bottom: 10px;
+}
+
+.pb15 {
+    padding-bottom: 15px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.pb30 {
+    padding-bottom: 30px;
+}
+
+.pl5 {
+    padding-left: 5px;
+}
+
+.pl10 {
+    padding-left: 10px;
+}
+
+.pl15 {
+    padding-left: 15px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.pl30 {
+    padding-left: 30px;
+}
+
+.pr5 {
+    padding-right: 5px;
+}
+
+.pr10 {
+    padding-right: 10px;
+}
+
+.pr15 {
+    padding-right: 15px;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+.pr30 {
+    padding-right: 30px;
+}
+
+/* === 字体大小 === */
+
+.font12 {
+    font-size: 12px !important;
+}
+
+.font14 {
+    font-size: 14px !important;
+}
+
+.font16 {
+    font-size: 16px;
+}
+
+.font18 {
+    font-size: 18px !important;
+}
+
+.font20 {
+    font-size: 20px;
+}
+
+.font22 {
+    font-size: 22px !important;
+}
+
+.font24 {
+    font-size: 24px !important;
+}
+
+.font26 {
+    font-size: 26px !important;
+}
+
+.font28 {
+    font-size: 28px !important;
+}
+
+.font30 {
+    font-size: 30px !important;
+}
+
+.font36 {
+    font-size: 36px;
+}
+
+.font40 {
+    font-size: 40px;
+}
+
+.font48 {
+    font-size: 48px;
+}
+
+/* === 字体粗细 === */
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+/* === 字体颜色 === */
+
+.font-white {
+    color: #fff;
+}
+
+.font-green {
+    color: #10c55b !important;
+}
+
+.font-blue {
+    color: #2d8cf0 !important;
+}
+
+.font-orange {
+    color: #FF4500 !important;
+}
+
+.font-purple {
+    color: #9932CC;
+}
+
+.font-brown {
+    color: #8B4513;
+}
+
+.font-gold {
+    color: #ff9700;
+}
+
+.font-red {
+    color: #d71718 !important;
+}
+
+.font-black {
+    color: #1b1b1b !important;
+}
+
+.font-gray {
+    color: #cdcdcd !important;
+}
+
+.font-gray1 {
+    color: #888 !important;
+}
+
+.font-gray2 {
+    color: gray;
+}
+
+.font-gray3 {
+    color: #666;
+}
+
+.font-gray4 {
+    color: #333;
+}
+
+.font-cyan {
+    color: #2bb8aa !important;
+}
+
+/* === 背景颜色 === */
+
+.bg-white {
+    background-color: #fff !important;
+}
+
+.bg-green {
+    background-color: #10c55b;
+}
+
+.bg-blue {
+    background-color: #2d8cf0 !important;
+}
+
+.bg-orange {
+    background-color: #FF4500 !important;
+}
+
+.bg-purple {
+    background-color: #9932CC;
+}
+
+.bg-brown {
+    background-color: #8B4513;
+}
+
+.bg-gold {
+    background-color: #ff9700;
+}
+
+.bg-red {
+    background-color: #d71718 !important;
+}
+
+.bg-black {
+    background-color: #000 !important;
+}
+
+.bg-gray {
+    background-color: #cdcdcd !important;
+}
+
+.bg-gray1 {
+    background-color: #999;
+}
+
+.bg-gray2 {
+    background-color: gray;
+}
+
+.bg-gray3 {
+    background-color: #666;
+}
+
+.bg-cyan {
+    background-color: #2bb8aa !important;
+}
+
+/* === 状态背景 === */
+
+.bg-success {
+    background-color: rgb(19, 206, 102);
+}
+
+.bg-warning {
+    background-color: rgb(247, 186, 42);
+}
+
+.bg-danger {
+    background-color: #d71718 !important;
+}
+
+.bg-info {
+    background-color: rgb(80, 191, 255);
+}
+
+/* === 状态字体 === */
+
+.font-success {
+    color: rgb(19, 206, 102);
+}
+
+.font-warning {
+    color: rgb(247, 186, 42);
+}
+
+.font-danger {
+    color: rgb(255, 73, 73) !important;
+}
+
+.font-info {
+    color: rgb(80, 191, 255);
+}
+
+/* === 定位 === */
+
+.pos-abs {
+    position: absolute;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+/* === 行高 === */
+.lineh20 {
+    line-height: 20px !important;
+}
+
+.lineh30 {
+    line-height: 30px !important;
+}
+
+.lineh40 {
+    line-height: 40px !important;
+}
+
+.lineh50 {
+    line-height: 50px !important;
+}
+
+/* === 省略号 === */
+
+.ellipsis,
+.ellipsis-1 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ellipsis-2 {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.ellipsis-3 {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.ellipsis-6 {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}

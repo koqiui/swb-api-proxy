@@ -1,0 +1,168 @@
+/* Toast 提示  --------------- */
+
+div.toast {
+	position: absolute;
+	z-index: 10000000;
+	padding: 10px;
+	width: auto;
+	min-width: 200px;
+	min-height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 10px;
+	background: #000;
+	background: rgba(0, 0, 0, .7);
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+	*background: #000;
+	*filter: alpha(Opacity=70);
+}
+
+div.toast>span.content {
+	display: inline-block;
+	color: #FFFFFF;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	padding: 2px;
+	padding-top: 40px;
+}
+
+div.toast>span.success {
+	background-image: url("../image/toast/success.png");
+}
+
+div.toast>span.info {
+	background-image: url("../image/toast/info.png");
+}
+
+div.toast>span.warning {
+	background-image: url("../image/toast/warning.png");
+}
+
+div.toast>span.error {
+	background-image: url("../image/toast/error.png");
+}
+
+
+/* TopMsg 样式 */
+
+div.top-msg {
+	position: absolute;
+	z-index: 10000000;
+	padding: 0;
+	top: 0;
+	left: 50%;
+	margin-left: -400px;
+	width: 800px;
+	max-width: 100%;
+	min-height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 20px;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+	filter: alpha(Opacity=70);
+	background: rgba(0, 0, 0);
+	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0);
+}
+
+div.top-msg.full-width {
+	left: 0;
+	width: 100%;
+	margin-left: 0;
+}
+
+div.top-msg.success {
+	background: rgba(39, 174, 96);
+	background: rgba(39, 174, 96, 0.7);
+	*background: rgba(39, 174, 96);
+}
+
+div.top-msg.info {
+	background: rgba(0, 186, 186);
+	background: rgba(0, 186, 186, 0.7);
+	*background: rgba(0, 186, 186);
+}
+
+div.top-msg.warning {
+	background: rgba(243, 156, 18);
+	background: rgba(243, 156, 18, 0.7);
+	*background: rgba(243, 156, 18);
+}
+
+div.top-msg.error {
+	background: rgba(231, 76, 60);
+	background: rgba(231, 76, 60, 0.7);
+	*background: rgba(231, 76, 60);
+}
+
+div.top-msg>.content {
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	padding: 10px 40px 10px 80px;
+	color: #FFFFFF;
+	font-size: 14px;
+}
+
+div.top-msg>.content>a {
+	color: #0000FF;
+}
+
+div.top-msg>.content>img {
+	width: 100%;
+}
+
+div.top-msg>.icon {
+	width: 24px;
+	height: 24px;
+	float: left;
+	margin-top: 8px;
+	margin-left: 10px;
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+div.top-msg>.icon.success {
+	background-image: url("../image/toast/success.png");
+}
+
+div.top-msg>.icon.info {
+	background-image: url("../image/toast/info.png");
+}
+
+div.top-msg>.icon.warning {
+	background-image: url("../image/toast/warning.png");
+}
+
+div.top-msg>.icon.error {
+	background-image: url("../image/toast/error.png");
+}
+
+div.top-msg>.icon.close {
+	cursor: pointer;
+	top: 0;
+	float: right;
+	margin-left: 0;
+	margin-right: 10px;
+	background-size: 16px 16px;
+	background-image: url("../image/toast/close.png");
+}
+
+div.top-msg>.speaker {
+	width: 24px;
+	height: 24px;
+	float: left;
+	margin-top: 8px;
+	margin-left: 0;
+	background-size: 20px 20px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url("../image/toast/speaker.png");
+}
+
+div.top-msg>.speaker.mute {
+	background-image: url("../image/toast/speaker-mute.png");
+}
