@@ -22,6 +22,28 @@
 		<maven.javadoc.skip>true</maven.javadoc.skip>
 	</properties>
 
+	<repositories>
+
+		<repository>
+			<id>swb-release</id>
+			<url>http://www.raiserswin.com:8800/artifactory/libs-release</url>
+		</repository>
+		<repository>
+			<id>swb-releases-local</id>
+			<url>http://www.raiserswin.com:8800/artifactory/ext-release-local</url>
+		</repository>
+		<repository>
+			<id>swb-snapshot</id>
+			<url>http://www.raiserswin.com:8800/artifactory/libs-snapshot</url>
+		</repository>
+
+		<repository>
+			<id>aliyun-releases</id>
+			<url>http://www.raiserswin.com:8800/artifactory/aliyun</url>
+		</repository>
+
+	</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
