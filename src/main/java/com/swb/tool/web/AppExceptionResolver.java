@@ -23,6 +23,7 @@ import com.swb.common.exception.UnAuthorizedException;
 import com.swb.common.exception.UnTrustedAppException;
 import com.swb.common.exception.UnVerifiedAppException;
 import com.swb.common.exception.XRuntimeException;
+import com.swb.common.http.HttpMethod;
 import com.swb.common.model.Result;
 import com.swb.common.model.Result.Type;
 import com.swb.common.model.ResultCode;
@@ -195,16 +196,25 @@ public class AppExceptionResolver implements HandlerExceptionResolver {
 				if (StrUtil.hasText(this.loginUrl)) {
 					mv.setViewName("redirect:" + this.loginUrl);
 				} else {
-					mv.setViewName("forward:" + this.defaultErrorUrl);
-					mv.addObject(this.errorInfoKey, errorJson);
+					if (HttpMethod.GET.name().equals(request.getMethod())) {
+						mv.setViewName("forward:" + this.defaultErrorUrl);
+						mv.addObject(this.errorInfoKey, errorJson);
+					} else {
+						mv.setViewName("redirect:" + WebUtil.getAppAbsUrl(request, this.defaultErrorUrl));
+					}
 				}
 			} else {
+				String theErrorUrl = this.defaultErrorUrl;
 				if (statusCode == HttpStatus.SC_NOT_FOUND && StrUtil.hasText(this.error404url)) {
-					mv.setViewName("forward:" + this.error404url);
-				} else {
-					mv.setViewName("forward:" + this.defaultErrorUrl);
+					theErrorUrl = this.error404url;
 				}
-				mv.addObject(this.errorInfoKey, errorJson);
+				//
+				if (HttpMethod.GET.name().equals(request.getMethod())) {
+					mv.setViewName("forward:" + theErrorUrl);
+					mv.addObject(this.errorInfoKey, errorJson);
+				} else {
+					mv.setViewName("redirect:" + WebUtil.getAppAbsUrl(request, theErrorUrl));
+				}
 			}
 		}
 		//
