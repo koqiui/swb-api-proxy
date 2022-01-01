@@ -23,7 +23,7 @@ public class IdxController extends AbsController {
 		return "index";
 	}
 
-	@RequestMapping(value = "/error/error", method = RequestMethod.GET)
+	@RequestMapping(value = "/error/error", method = { RequestMethod.GET, RequestMethod.POST })
 	public String toErrorPage() {
 		return "error/error";
 	}
